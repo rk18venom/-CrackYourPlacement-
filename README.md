@@ -1,2 +1,2 @@
 # -CrackYourPlacement-
-Followed Arsh Goyal DSA Sheet
+Follow Arsh Goyal DSA Sheet
