@@ -5,7 +5,9 @@
 #Step 2: Try all partition
         #Run a loop to try all
 #Step 3: Return the best possible 2 partition.
- 
+
+#Time Complexity: O(n^3)
+#Space Complexity: O(n^2) 
 import sys
 def helper(i,j,p,dp):
     if i==j:
