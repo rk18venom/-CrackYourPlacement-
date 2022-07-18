@@ -16,10 +16,10 @@ def removeConsecutiveDuplicatesModified(s):
     if len(s)==0 or len(s)==1:
         return s
     if s[0]==s[1]:
-        smallerOutput=removeDuplicates(s[2:])
+        smallerOutput=removeConsecutiveDuplicatesModified(s[2:])
         return s[1]+smallerOutput if smallerOutput[0]!=s[1] else smallerOutput
     else:
-        smallerOutput=removeDuplicates(s[1:])
+        smallerOutput=removeConsecutiveDuplicatesModified(s[1:])
         return s[0]+smallerOutput if smallerOutput[0]!=s[0] else smallerOutput
 
 # Main
