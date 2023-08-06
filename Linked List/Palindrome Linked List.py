@@ -1,20 +1,17 @@
-#Problem Link: https://leetcode.com/problems/linked-list-cycle/description/
-
-#Fast and Slow Algorithm 
+#Problem Link: https://leetcode.com/problems/palindrome-linked-list/description/
 class NodeLL:
     def __init__(self, data):
         self.data=data
         self.next=None
 
-def hasCycle(head):
-    fast=head
-    second=head
-    while fast!=None and fast.next!=None:
-        fast=fast.next.next
-        second=second.next
-        if fast==second:
-            return True
-    return False
+def isPalindrome(head):
+    s=[]
+    
+    while head!=None:
+        s.append(head.data)
+        head=head.next
+    
+    return s[::-1]==s
 
 def takeInput():
     n=int(input())
@@ -43,4 +40,5 @@ def takeInput():
     return head
 
 head=takeInput()
-print(hasCycle(head))
+print("Is Palindrome?",isPalindrome(head))
+        
