@@ -1,8 +1,10 @@
 def sol(arr):
     n = len(arr)
+    dict1={}
     data=[]
     for x in arr:
-        if x not in data:
+        if x not in dict1:
+            dict1[x]=1
             print("No")
             data.append(x)
         else:
