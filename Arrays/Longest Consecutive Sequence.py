@@ -1,4 +1,5 @@
 #Problem Link: https://leetcode.com/problems/longest-consecutive-sequence/
+#Problem Link: https://www.naukri.com/code360/problems/longest-consecutive-sequence_759408?leftPanelTabValue=PROBLEM
 
 #Time Complexity: O(n)
 #Using Hashing
@@ -46,4 +47,23 @@ def longestConsecutive(nums):
                     l=1
         ans=max(ans,l)
         return ans
+
+def lengthOfLongestConsecutiveSequence(arr, n):
+    # Write your code here.
+    arr.sort()
+    dict1={}
+    for x in arr:
+        dict1[x]=dict1.get(x,0)+1
+    
+    ans=0
+    i=0
+    while i<n:
+        x=arr[i]
+        count=0
+        while dict1.get(x,0)!=0:
+            count+=1
+            x+=1
+        ans=max(count,ans)
+        i+=count
+    return ans
         
